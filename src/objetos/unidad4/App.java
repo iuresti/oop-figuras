@@ -14,18 +14,24 @@ public class App {
     public static void main(String[] args) {
         List<Figura> figuras = new LinkedList<>();
 
+        Figura circulo = new Circulo();
+
         figuras.add(new Cuadrado());
-        figuras.add(new Circulo());
+        figuras.add(circulo);
         figuras.add(new Triangulo());
 
-        dibujaFiguras(figuras);
+        //dibujaFiguras(figuras);
+
+        circulo.dibuja();
+
     }
 
     private static void dibujaFiguras(List<Figura> figuras) {
         Iterator<Figura> figurasIterator = figuras.iterator();
 
         while (figurasIterator.hasNext()){
-            System.out.println("Figura:" + figurasIterator.next().toString());
+            //figurasIterator.next().dibuja();
+            //System.out.println("Figura:" + );
         }
     }
 }
