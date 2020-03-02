@@ -14,6 +14,7 @@ public class Circulo extends Figura {
         super("Circulo", color);
     }
 
+
     public void dibuja(){
         System.out.println("Soy circulo");
     }
