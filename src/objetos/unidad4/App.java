@@ -7,6 +7,7 @@ import java.util.List;
 import objetos.unidad4.general.Figura;
 import objetos.unidad4.specific.Circulo;
 import objetos.unidad4.specific.Cuadrado;
+import objetos.unidad4.specific.Isoceles;
 import objetos.unidad4.specific.Triangulo;
 
 public class App {
@@ -16,7 +17,7 @@ public class App {
 
         figuras.add(new Cuadrado());
         figuras.add(new Circulo());
-        figuras.add(new Triangulo());
+        figuras.add(new Isoceles());
 
         dibujaFiguras(figuras);
 
