@@ -5,21 +5,22 @@ import java.util.LinkedList;
 import java.util.List;
 
 import objetos.unidad4.general.Figura;
-import objetos.unidad4.specific.Circulo;
-import objetos.unidad4.specific.Cuadrado;
-import objetos.unidad4.specific.Isoceles;
-import objetos.unidad4.specific.Triangulo;
+import objetos.unidad4.views.View;
+import objetos.unidad4.views.WorkArea;
 
 public class App {
 
+
     public static void main(String[] args) {
-        List<Figura> figuras = new LinkedList<>();
+        Editor editor = new Editor();
 
-        figuras.add(new Cuadrado());
-        figuras.add(new Circulo());
-        figuras.add(new Isoceles());
+        editor.refresh();
 
-        dibujaFiguras(figuras);
+        WorkArea workArea = new WorkArea();
+
+        doSomething(workArea);
+
+        doSomething2(workArea);
 
     }
 
@@ -31,5 +32,15 @@ public class App {
 
             figura.dibuja();
         }
+    }
+
+    public static void doSomething(View view){
+        List<Figura> figuras = new LinkedList<>();
+
+        view.refresh(figuras);
+    }
+
+    public static void doSomething2(Persistable persistable){
+        persistable.save();
     }
 }
